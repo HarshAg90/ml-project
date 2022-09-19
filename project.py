@@ -1,12 +1,6 @@
 from sklearn.linear_model import LinearRegression
 import pandas
 
-# data = {
-#     "median age":[31,44,44,41,39,38,41,37,41,43],
-#     "median income":[51,54,59,49,51,49,60,48,52,63],
-#     "private health":[32,47,54,42,38,30,50,24,40,50]
-# }
-# df = pandas.DataFrame(data)
 df = pandas.read_csv("data.csv")
 train_df_x = df[["median age", "median income"]].iloc[:7]
 train_df_y = df[["private health"]].iloc[:7]
